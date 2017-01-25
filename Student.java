@@ -1,4 +1,4 @@
-package com.company; /**
+package com.School; /**
  * Created by Agnieszka on 19/01/17.
  */
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.School;
 
 import java.util.*;
 import java.lang.*;
