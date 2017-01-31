@@ -11,20 +11,20 @@ public class LifeSchool {
 
 
     public static void main(String[] args) {
-                                                /*
-                                                1/Ecrivez un programme principal dans la classe LifeSchool,
-                                                dans lequel vous créerez une école nommée InfoJava avec les étudiants suivants:
-                                                                Prénom; Nom; Date de naissance; âge
-                                                                Stéphanie; Durand; 12/11/1980; 37
-                                                                Mamadou; Fort; 13/09/1992;25
-                                                                Florence; Lune; 05/04/2001;16
-                                                                Loic; Martin; 07/07/1998;19
-                                                2/ Afficher toutes les informations concernant l'école Simplon et ses étudiants.
-                                                3/Ajouter une méthode permettant de connaître l'âge moyenne des étudiants.
-                                                4/ Testez méthode Age Moyen dans le programme principal.
-                                                pour les dates, vous pouvez utilisez localDate
-                                                exemple LocalDate date = LocalDate.of(2014, Month.DECEMBER, 12);
-                                                 */
+                                                                            /*
+                                                                            1/Ecrivez un programme principal dans la classe LifeSchool,
+                                                                            dans lequel vous créerez une école nommée InfoJava avec les étudiants suivants:
+                                                                                            Prénom; Nom; Date de naissance; âge
+                                                                                            Stéphanie; Durand; 12/11/1980; 37
+                                                                                            Mamadou; Fort; 13/09/1992;25
+                                                                                            Florence; Lune; 05/04/2001;16
+                                                                                            Loic; Martin; 07/07/1998;19
+                                                                            2/ Afficher toutes les informations concernant l'école Simplon et ses étudiants.
+                                                                            3/Ajouter une méthode permettant de connaître l'âge moyenne des étudiants.
+                                                                            4/ Testez méthode Age Moyen dans le programme principal.
+                                                                            pour les dates, vous pouvez utilisez localDate
+                                                                            exemple LocalDate date = LocalDate.of(2014, Month.DECEMBER, 12);
+                                                                             */
         // je cree une ecole - 1 instance de la classe School
         School SimplonJava = new School("SimplonJava");
 
@@ -39,11 +39,11 @@ public class LifeSchool {
         SimplonJava.getStudentList().addElement(Durand);
         SimplonJava.getStudentList().addElement(Fort);
         SimplonJava.getStudentList().addElement(Lune);
-        SimplonJava.getStudentList().addElement(Martin);
+        SimplonJava.getStudentList().add(Martin);
 
 
         // J'affiche  toutes les informations concernant l'école Simplon et ses étudiants.
-        printSchoolInfo (SimplonJava);
+        System.out.println (SimplonJava.toString());
 
         // j'affiche l'age moyen
         printSchoolMeanAge (SimplonJava);
@@ -72,7 +72,7 @@ public class LifeSchool {
 
 
         // J'affiche  toutes les informations concernant l'école Simplon et ses étudiants.
-        printSchoolInfo (SimplonJava);
+        System.out.println (SimplonJava.toString());
 
         // j'affiche l'age moyen
         printSchoolMeanAge (SimplonJava);
@@ -86,25 +86,20 @@ public class LifeSchool {
 
 
 
-    // Je defini une methode pour afficher les informations concernant ecole.
-
-    public static void printSchoolInfo (School a) { System.out.println (a.toString() ); }
-
-
 
     // Je defini une méthode permettant de connaître l'âge moyenne des étudiants.
 
     public static void printSchoolMeanAge (School a) {
-        String st= " La moyenne d'age dans l'ecole "+a.getNomEcole()+" est : "+ a.returnMeanAge();
-        System.out.println ("\n"+st+"\n");
-    }
+                                                        String st= " La moyenne d'age dans l'ecole "+a.getSchoolName()+" est : "+ a.returnMeanAge();
+                                                        System.out.println ("\n"+st+"\n");
+                                                     }
 
-
+    // Je defini une méthode permettant de comparer 2 étudiants.
     public static void compareLevel (Graduate a, Graduate b) {
-        boolean equals = a.equals(b);
-        if (true) System.out.println("\n Les Graduates "+ a.getPrenom()+" et "+b.getPrenom()+" ont le meme niveau d'etudes");
-        else System.out.println("\n Les Graduates "+ a.getPrenom()+" et "+b.getPrenom()+" ont le niveau d'etudes different");
-    }
+                                                                boolean equals = a.equals(b);
+                                                                if (true) System.out.println("\n Les Graduates "+ a.getName()+" et "+b.getFamilyName()+" ont le meme niveau d'etudes");
+                                                                else System.out.println("\n Les Graduates "+ a.getName()+" et "+b.getFamilyName()+" ont le niveau d'etudes different");
+                                                            }
 
 
 

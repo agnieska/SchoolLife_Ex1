@@ -19,25 +19,25 @@ public class School {
                                                          */
 
 
-    private String NomEcole;
+    private String SchoolName;
     private Vector<Student> StudentList;
     //private TreeMap < Student, String>  StudentList;
 
 
     public School(String nom)           {
-                                            NomEcole = nom;
+        SchoolName = nom;
                                             StudentList = new Vector<Student>() ;
                                         }
 
 
-    public String getNomEcole()             { return NomEcole; }
+    public String getSchoolName()             { return SchoolName; }
     public Vector<Student> getStudentList() { return StudentList; }
 
 
 
     public String toString()   {
                                     String st = "\n" +
-                                                "School : "+ this.NomEcole +
+                                                "Ecole : "+ this.SchoolName +
                                                 "\n" +
                                                 "Liste d'etudiants : " +
                                                 "\n" ;
@@ -47,7 +47,7 @@ public class School {
 
                                 }
   /*  public String toString()   {
-                                    String st = "\n School : "+ this.NomEcole + "\n\n"+
+                                    String st = "\n Ecole : "+ this.SchoolName + "\n\n"+
                                             "Liste d'etudiants : " + this.StudentList +\n";
                                     return  st;
 
@@ -55,9 +55,9 @@ public class School {
 
 
    public String toString()   {
-                                    String st = "\n School : "+ NomEcole + "\n"+
-                                            "Liste d'etudiants : \n" + StudentListe + "\n";
-                                    for (String name : StudentListe.values())
+                                    String st = "\n School : "+ SchoolName + "\n"+
+                                            "Liste d'etudiants : \n" + StudentList + "\n";
+                                    for (String name : StudentList.values())
                                     { st = st + name.toString();}
                                     return  st+"\n";
                                 }
